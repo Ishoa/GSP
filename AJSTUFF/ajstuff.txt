@@ -1,0 +1,27 @@
+1.
+a. int= 4bytes
+b. long= 4bytes
+c. short= 2bytes
+d. char= 1bytes
+e. float= 4bytes
+f. double= 8bytes
+g. int*= 4bytes
+h. long long=8bytes
+
+Microsoft compiler
+GCC compiler GNU is Not Unix
+LLUM compiler
+
+memory fragmentation 
+not enough space to put your memory block because different sizes of memory taht arnt contiguious that are not big enough for the big chunks are too small for the small chunks swiss cheeze hoels of wasted space
+
+4.
+vector
+
+pointer poitns to a location in memory
+array if called without the brackets poitns to a location in memory
+both are references to one location in memory
+pointer is an L value that u can modify
+and array is not an L value
+
+brackets are nto array access numbers they have always been pointers.
