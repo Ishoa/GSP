@@ -83,3 +83,20 @@ pre processor
 compiler
 assemb0ler
 linker
+
+argc argv are just command line arguments
+
+system calls system commands;
+system is the most powerful tool in the entire programing arsenal.
+
+use
+_getch from conio to wait for a keypress.
+
+maloc and free do not call constructors or destructors must explicitely call them yourself
+with new and delete constructors and deconstructors are called automatically
+altho maloc and free are faster.
+
+little indian and big indian
+
+little indian stores the least significant byte first 
+big indian stores the largest significant byte first
