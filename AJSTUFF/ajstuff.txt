@@ -114,3 +114,5 @@ big indian stores the largest significant byte first
 
 inline means this function is a special function 
 means any fucntion that has it can be multiply defined in more than one compilation unit.
+
+
