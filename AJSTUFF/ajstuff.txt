@@ -66,7 +66,7 @@ unsigned  means the sign bit is positive . as a result of this the number can be
 ifdef and endif describs conditionally included code that will not show unless it is defined
 
 ex 
-#defien is a macro definer
+#defien is a macro  templater.
 #undef releases a macro
 #define somestuff
 // if defien somestuff didnt exist  thhe code bellow wouldnt be compiled
@@ -87,6 +87,16 @@ linker
 argc argv are just command line arguments
 
 system calls system commands;
+
+extern is a compiler message that says dont worry about this right now because
+during the link step (static or dynamic) it will exist i promise
+
+explicit - prevent single argumetn constructors from being automaticallyc alled in a type conversion.
+
+volitile= im going to make a peice of information usually one byte..
+and it means you are not allowed to cache it.. u must go to the ram 
+used to mark chunks of data for being used or not used / basically door to the bathroom.
+can also add a callback for when its done. or else will need to constantly check.
 system is the most powerful tool in the entire programing arsenal.
 
 use
@@ -100,3 +110,7 @@ little indian and big indian
 
 little indian stores the least significant byte first 
 big indian stores the largest significant byte first
+
+
+inline means this function is a special function 
+means any fucntion that has it can be multiply defined in more than one compilation unit.
