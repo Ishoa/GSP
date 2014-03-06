@@ -60,6 +60,12 @@ public:
 		m_size=0;
 		m_usedSize=0;
 	}
+	Vectr(Vectr & other):m_data(0),m_size(0),m_usedSize(0){
+		setSize(other.size());
+		for(int i=0;i<m_size;++i){
+			m_data[i]= other.m_data[i];
+		}
+	}
 	//	setSize(m_size+1);
 	//	m_data[m_size-1] = value;
 	//}
@@ -139,7 +145,24 @@ void printByte(char byte){
 #include <fstream>
 using namespace std;
 
-int main(){
+
+
+int main(int argc, char ** argv){
+	
+	int magicNumber = 0x1337b335;//deadb33f;//b44df00d;
+	
+	char * ptr = (char*)&magicNumber;
+
+	printf("%02x\n ", magicNumber);
+	for(int i = 0;i<sizeof(magicNumber);++i)
+	{
+		printf("%02x ", (0xff & ptr[i]));
+	}
+	putchar('\n');
+	//system("ipconfig");
+	for (int i=0;i<argc;i++){
+		std::cout<< i <<" "<<argv[i]<<endl;
+	}
 	char * filename="day1stuff.cpp";
 	fstream file(filename);
 	int filesize = 0;
@@ -158,7 +181,7 @@ int main(){
 	}
 	allTheData[filesize]='\0';
 	file.close();
-	cout<<allTheData<<filesize<<" vs "<<expectedlength<<endl;
+	//cout<<allTheData<<filesize<<" vs "<<expectedlength<<endl;
 
 #include "t.txt"
 	int testNumber = 19;
