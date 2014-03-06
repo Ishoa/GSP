@@ -7,6 +7,16 @@ e. float= 4bytes
 f. double= 8bytes
 g. int*= 4bytes
 h. long long=8bytes
+a long long has 64 bits in it.
+256 
+512
+1023
+2048
+4096
+8192
+16384
+32768
+65536
 
 Microsoft compiler
 GCC compiler GNU is Not Unix
@@ -25,3 +35,51 @@ pointer is an L value that u can modify
 and array is not an L value
 
 brackets are nto array access numbers they have always been pointers.
+
+to iterate across a vector is pointer ++ interate across a linked list = pointer = next
+linked list is non-continguous vector is continguous
+vector is faster at accessing data int he middle o(1)
+linked list is o(N)
+
+linked list is faster at inserting in the beginning  O(1)
+vector is o(N) has to shift every element over before adding another element
+
+vector is usually o(1) when inserting to the end and then faster but if it is full then it becomes of o(N)+memory allocation
+linked list has memory allocation every time
+
+linked list takes ~o(N) when inserting at the end and randomly same with vector
+
+whenever pointers are involved, vectors are a horrible idea
+
+linked lists are prone to cache miss
+
+vectors are prone to fragmentation
+not memory stable
+
+void* means it can point to anything a pointer to an undefined type and must be type casted
+void means no defined type
+
+unsigned  means the sign bit is positive . as a result of this the number can be twice as big but never negative
+
+#include does a file copy and paste;
+
+ifdef and endif describs conditionally included code that will not show unless it is defined
+
+ex 
+#defien is a macro definer
+#undef releases a macro
+#define somestuff
+// if defien somestuff didnt exist  thhe code bellow wouldnt be compiled
+#ifndef somestuff
+sdfasdfdf as
+asdfasdf
+asdfdf
+#endif
+
+conditionally written code
+
+pre processor
+
+compiler
+assemb0ler
+linker
