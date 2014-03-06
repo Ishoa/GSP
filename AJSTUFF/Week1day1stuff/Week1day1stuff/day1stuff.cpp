@@ -68,7 +68,160 @@ public:
 	//	m_size=0;
 	//}
 };
+
+class LinkedList{
+	struct LLNode{
+		float data;
+		LLNode * next;
+		LLNode(float value):data(value),next(0){}
+	};
+	LLNode * head;
+public:
+	LinkedList():head(0){}
+	int size(){
+		LLNode * ptr =head;
+		int count =0;
+		while(ptr){
+			count++;
+			ptr =ptr->next;
+		}
+		/*int count=(1,2,3,0);
+		LLNode *ptr;
+		for(ptr=head,count=0;ptr;++count,ptr=ptr->next);
+		return count;*/
+	}
+	LLNode*getNode(int index){
+		LLNode*ptr = head;
+		int count=0;
+		while(count<index){
+			ptr=ptr->next;
+			count++;
+		}
+		return ptr;
+	}
+	float get(int index){
+		return getNode(index)->data;
+	}
+	void add(float value){
+		LLNode *newNode=new LLNode(value);
+		if(head==0) head =newNode;
+		else getNode(size()-1)->next=newNode;
+	}
+	void addFront(float value){
+		LLNode*newNode=new LLNode(value);
+		newNode->next=head;
+		head=newNode;
+	}
+	~LinkedList(){
+		LLNode*lefthand=head;
+		LLNode*righthand;
+		while(lefthand){
+			righthand=lefthand;
+			lefthand=lefthand->next;
+			delete righthand;
+		}
+	}
+};
+
+void printByte(char byte){
+	//for(int i=0;i<CHAR_BIT;++i)
+	//must be in reverse
+	for(int i=CHAR_BIT-1; i>=0;--i){
+	/*	if(byte&(1<<i)){
+			putchar('1');
+		}else{
+			putchar('0');
+		}*/
+		putchar( (byte &(1<<i))?'1':'0');
+	}
+}
+
+#include <fstream>
+using namespace std;
+
 int main(){
+	char * filename="day1stuff.cpp";
+	fstream file(filename);
+	int filesize = 0;
+	file.seekg (0, file.end);
+	int expectedlength = file.tellg();
+	file.seekg (0, file.beg);
+	while(file.get()!=EOF){
+		filesize++;
+	}
+	file.close();
+	file.clear();
+	file.open(filename);
+	char *allTheData = new char[filesize+1];
+	for(int i=0;i<filesize;++i){
+		allTheData[i]=file.get();
+	}
+	allTheData[filesize]='\0';
+	file.close();
+	cout<<allTheData<<filesize<<" vs "<<expectedlength<<endl;
+
+#include "t.txt"
+	int testNumber = 19;
+	printByte(testNumber);
+	putchar('\n');
+
+
+#define BITSHIFT_THINGY(expression) printByte(expression); printf(" " #expression " = %d\n", expression);
+	
+	/*printByte(34);    printf(" 34 = %d\n",  34);
+	printByte(34<<1); printf(" 34 << 1%d\n",34<<1);
+	printByte(34>>2); printf(" 34>> 2%d\n", 34>>2);*/
+	BITSHIFT_THINGY(34);
+	BITSHIFT_THINGY(34 << 1);
+	BITSHIFT_THINGY(34 >> 2);
+	putchar('\n');
+	BITSHIFT_THINGY(34);
+	BITSHIFT_THINGY(19);
+	BITSHIFT_THINGY(19 | 34);
+	putchar('\n');
+	BITSHIFT_THINGY(34);
+	BITSHIFT_THINGY(19);
+	BITSHIFT_THINGY(19 & 34);
+	putchar('\n');
+	BITSHIFT_THINGY(34);
+	BITSHIFT_THINGY(19);
+	BITSHIFT_THINGY(19 ^ 34);
+	putchar('\n');
+	BITSHIFT_THINGY(+34);
+	BITSHIFT_THINGY(~34);
+	BITSHIFT_THINGY(-34);
+	//34>>2
+	//19|34
+	//19&34
+	//19^34
+	//~34
+
+	int MYSECRETNUMBER = 17;
+	int MYSECRETCODE = 3478906234;
+	BITSHIFT_THINGY(MYSECRETNUMBER);
+	BITSHIFT_THINGY(MYSECRETCODE);
+	MYSECRETNUMBER = MYSECRETNUMBER ^ MYSECRETCODE;
+	BITSHIFT_THINGY(MYSECRETNUMBER);
+	MYSECRETNUMBER = MYSECRETNUMBER ^ MYSECRETCODE;
+	BITSHIFT_THINGY(MYSECRETNUMBER);
+
+	//swapping with exclusive or
+	int num1 = 17;
+	int num2 = 32;
+	BITSHIFT_THINGY(num1);
+	BITSHIFT_THINGY(num2);
+	num1 ^= num2;
+	BITSHIFT_THINGY(num1);
+	BITSHIFT_THINGY(num2);
+	num2 ^= num1;
+	BITSHIFT_THINGY(num1);
+	BITSHIFT_THINGY(num2);
+	num1 ^= num2;
+	BITSHIFT_THINGY(num1);
+	BITSHIFT_THINGY(num2);
+
+	BITSHIFT_THINGY(19);
+	BITSHIFT_THINGY(~19);
 	int sizes[] = {
 		sizeof (int),
 		sizeof (long),
@@ -237,4 +390,3 @@ int main(){
 	_getch();
 	return 0;
 }
-
