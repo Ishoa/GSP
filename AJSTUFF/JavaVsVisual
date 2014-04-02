@@ -1,0 +1,74 @@
+Java -
+Virtual Machine
+does memory defrag at runtime.
+  Code Safty
+    Security: no malicious code
+    Exception Handling <--really good
+  Understands its own code at runtime
+    Full stack info at all times
+    Reflection:
+      helps the IDE (intelej by idea
+      helps functional programing
+      help programmers learn
+      compiled code injection(data serialization features)
+  
+  
+  Portable byte code
+  WRITE ONCE RUN ANYWHERE
+  virtual machien protable byt code implements this
+    compiled code "not assembly code:doesnt run on the metal"                  C++ runs "on the metal"  
+    Java's execution is limited by the virtual machine                         pure control over when you do things 
+    To redraw you would have to wait until the virtual machien does it        "total Control over hardware
+                                                                               improves performance
+    Virtual Machine is Overhead - JIT - Just in time makes it competitive with C
+                                                                                C++ GIVES DIRECT MEMORY ACCESS
+    No memory access- to get unique ID's uses hash codes.
+    
+    Sytax
+    java has ToString()
+    Non-primitives are references in Java
+    Final is sorta equivalent to const
+    final class cannot be inherited from
+    const = dead keyword in java
+    
+    Java bitshift- extra bitshift operator in java <<<
+    there is no unsigned in java <<< allows you to move the sign bit as well.
+    Java has a long of 8: and in C is 4 becaus ein java an int is always 4 and in c it is not always 4 sometimes 2.
+    byte in java that isnt in c++ byte is always 1 byte and a byte in java is always unsigned                  
+    
+    java can have multple entry points within a program (multiple maans
+    testing a class within its on main (test driven development process)
+    
+    Java has applets 
+    Standard Library is HUGE                    C standard library is fast 
+    *Graphics   AWT, Swingx
+    *U.I.
+    *Networking
+    JOGL pretty close to a standard
+    *sound
+    Web
+    Data serialization
+    xml porting and json
+    data structions
+    threading
+    file 1/0
+    RSA encryption
+    documentation culture of java is way better
+    Garbage collection if nothing is pointing at a peice of data it clears it for you (reference counting)
+      System.gc();
+      
+      Thread Garbage collection.
+      mark and sweep
+      
+      2 kinds reference counting ( increment and decrement numbers)
+      mark and sweep ( every thread needs to find all of its variables
+                    and mark them. and then goes thru memory and finds who wasnt marked and swept away)
+                    
+     cant force delete
+     
+     3 types of java . J2 ME little
+                      J2 SE  standard
+                      J2 EE  big
+                      Dalvik java (specific for android) almost all the same features as java but better
+                      
+      no -> in java and no :: in java only the DOT .
