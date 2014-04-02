@@ -72,3 +72,26 @@ does memory defrag at runtime.
                       Dalvik java (specific for android) almost all the same features as java but better
                       
       no -> in java and no :: in java only the DOT .
+      
+      all members need scope (has  to be defined as public or private)
+      
+      java requires a class for anything (java is the land of nouns and in this land all verbs msut be escorted by a noun)
+      in C verbs are EVERYWHERE
+      
+      c++ has multiple inheritances
+      
+      java only has single inheritance with interfaces
+      
+      explicitly call constructors
+      no overloaded operators in java except for one + for strings and +=
+      
+      clone makes a shallow copy. so its useless since everythign in java pretty much uses pointers.
+      
+      c++ has move copy constructor " copys data thats about to die to something that is in need of it"
+      
+      TEMPLATING VS GENERICS.
+      hacky generics in java and c++ has compile time only generics.
+      
+      java supports case / break.
+      
+      in c++ if statements allowed assignments and java does not because it realizes a bolean statement
